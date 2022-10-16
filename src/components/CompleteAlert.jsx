@@ -10,7 +10,7 @@ function CompleteAlert() {
       <Image src={CompleteIcon} />
       <VStack>
         <Heading letterSpacing="widest">THANK YOU!</Heading>
-        <Text>We've added your card details</Text>
+        <Text textColor="hsl(270, 3%, 87%)">We've added your card details</Text>
       </VStack>
       <Button
         w="100%"

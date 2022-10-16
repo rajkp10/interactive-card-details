@@ -79,6 +79,7 @@ function InputForm() {
           setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
         }}
         onSubmit={(values, { resetForm }) => {
+          setFormDetails(values);
           resetForm({ values: "" });
           setSuccess(!success);
         }}
@@ -102,6 +103,7 @@ function InputForm() {
                   variant="outline"
                   placeholder="e.g. Jane Appleseed"
                   fontSize="xl"
+                  _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
                   onChange={(e) => {
                     handleChange(e);
                     customHandleChange(e);
@@ -125,6 +127,7 @@ function InputForm() {
                   variant="outline"
                   placeholder="e.g. 1234 5678 9123 0000"
                   fontSize="xl"
+                  _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
                   onChange={(e) => {
                     handleChange(e);
                     customHandleChange(e);
@@ -156,6 +159,7 @@ function InputForm() {
                         variant="outline"
                         placeholder="MM"
                         fontSize="xl"
+                        _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
                         onChange={(e) => {
                           handleChange(e);
                           customHandleChange(e);
@@ -178,6 +182,7 @@ function InputForm() {
                         variant="outline"
                         placeholder="YY"
                         fontSize="xl"
+                        _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
                         onChange={(e) => {
                           handleChange(e);
                           customHandleChange(e);
@@ -206,6 +211,7 @@ function InputForm() {
                     variant="outline"
                     placeholder=" e.g. 123"
                     fontSize="xl"
+                    _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
                     onChange={(e) => {
                       handleChange(e);
                       customHandleChange(e);
