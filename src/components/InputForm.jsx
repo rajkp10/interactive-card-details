@@ -79,7 +79,6 @@ function InputForm() {
           setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
         }}
         onSubmit={(values, { resetForm }) => {
-          setFormDetails(values);
           resetForm({ values: "" });
           setSuccess(!success);
         }}
@@ -151,7 +150,7 @@ function InputForm() {
                         fontWeight="semibold"
                         letterSpacing="widest"
                       >
-                        EXP. DATE
+                        EXP.
                       </FormLabel>
                       <Input
                         id="expMonth"
@@ -174,7 +173,7 @@ function InputForm() {
                         fontWeight="semibold"
                         letterSpacing="widest"
                       >
-                        (MM/YY)
+                        DATE
                       </FormLabel>
                       <Input
                         id="expYear"
