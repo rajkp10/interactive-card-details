@@ -1,3 +1,19 @@
+## About Project
+
+Interactive Card Details Form Task from Frontend Mentor
+
+## Live Demo
+
+https://interactive-card-rajkp10.netlify.app/
+
+## Tools
+
+ReactJS, ChakraUI and Formik
+
+## Preview
+
+![interactive-card-details](https://user-images.githubusercontent.com/96880670/196101944-269691fb-a289-449d-bfb2-7ab5fbc26259.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
