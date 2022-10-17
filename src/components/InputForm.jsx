@@ -156,6 +156,7 @@ function InputForm() {
                         id="expMonth"
                         name="expMonth"
                         variant="outline"
+                        type="number"
                         placeholder="MM"
                         fontSize="xl"
                         _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
@@ -179,6 +180,7 @@ function InputForm() {
                         id="expYear"
                         name="expYear"
                         variant="outline"
+                        type="number"
                         placeholder="YY"
                         fontSize="xl"
                         _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
@@ -208,6 +210,7 @@ function InputForm() {
                     id="cvv"
                     name="cvv"
                     variant="outline"
+                    type="number"
                     placeholder=" e.g. 123"
                     fontSize="xl"
                     _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
