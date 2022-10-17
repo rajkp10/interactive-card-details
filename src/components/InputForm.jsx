@@ -15,13 +15,8 @@ import { useGlobalContext } from "./context";
 import CompleteAlert from "./CompleteAlert";
 
 function InputForm() {
-  const {
-    formDetails,
-    success,
-    setFormDetails,
-    customHandleChange,
-    setSuccess,
-  } = useGlobalContext();
+  const { formDetails, success, customHandleChange, handleSubmit } =
+    useGlobalContext();
 
   if (success) {
     return <CompleteAlert />;
@@ -75,12 +70,9 @@ function InputForm() {
           }
           return errors;
         }}
-        handleChange={(e) => {
-          setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
-        }}
         onSubmit={(values, { resetForm }) => {
           resetForm({ values: "" });
-          setSuccess(!success);
+          handleSubmit();
         }}
       >
         {({ handleSubmit, handleChange, touched, errors, values }) => (
@@ -156,7 +148,6 @@ function InputForm() {
                         id="expMonth"
                         name="expMonth"
                         variant="outline"
-                        type="number"
                         placeholder="MM"
                         fontSize="xl"
                         _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
@@ -180,7 +171,6 @@ function InputForm() {
                         id="expYear"
                         name="expYear"
                         variant="outline"
-                        type="number"
                         placeholder="YY"
                         fontSize="xl"
                         _focus={{ borderColor: "hsl(278, 94%, 30%)" }}
@@ -210,7 +200,6 @@ function InputForm() {
                     id="cvv"
                     name="cvv"
                     variant="outline"
-                    type="number"
                     placeholder=" e.g. 123"
                     fontSize="xl"
                     _focus={{ borderColor: "hsl(278, 94%, 30%)" }}

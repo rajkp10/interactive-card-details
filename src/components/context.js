@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 const AppContext = React.createContext();
 
@@ -18,11 +18,12 @@ const AppProvider = ({ children }) => {
     setFormDetails({ ...formDetails, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    if (!success) {
+  const handleSubmit = () => {
+    setSuccess(!success);
+    if (success) {
       setFormDetails(initialValues);
     }
-  }, [success]);
+  };
 
   return (
     <AppContext.Provider
@@ -31,7 +32,7 @@ const AppProvider = ({ children }) => {
         success,
         setFormDetails,
         customHandleChange,
-        setSuccess,
+        handleSubmit,
       }}
     >
       {children}

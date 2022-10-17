@@ -4,7 +4,7 @@ import CompleteIcon from "../images/icon-complete.svg";
 import { useGlobalContext } from "./context";
 
 function CompleteAlert() {
-  const { setSuccess } = useGlobalContext();
+  const { handleSubmit } = useGlobalContext();
   return (
     <VStack maxW={{ base: "xs", md: "sm" }} spacing="10">
       <Image src={CompleteIcon} />
@@ -17,7 +17,7 @@ function CompleteAlert() {
         color="hsl(0, 0%, 100%)"
         bgColor="hsl(278, 68%, 11%)"
         _hover={{ bgColor: "hsl(279, 6%, 55%)" }}
-        onClick={() => setSuccess(false)}
+        onClick={handleSubmit}
       >
         Continue
       </Button>
